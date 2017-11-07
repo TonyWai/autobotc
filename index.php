@@ -28,6 +28,8 @@ if(is_null($events['events'])){
             }
         }
     }
+}else{
+    echo 'event is null';
 }
 
 echo 'OK_wingit';
