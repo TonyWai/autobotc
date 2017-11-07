@@ -13,7 +13,7 @@ $channel_secret='dac747867a7c9c0072bdaa1a1030c932';
 $content=file_get_contents('php://input');
 $events=json_decode($content, true);
 
-if(is_null($events['events'])){
+if(!is_null($events['events'])){
     foreach($events['events'] as $event){
         if($event['type']='message'){
             switch($event['message']['type']){
